@@ -1,0 +1,157 @@
+---
+name: EditableTable
+route: /editable-table
+---
+
+import { Playground } from 'docz'
+import EditableTable from '../components/EditableTableDemo';
+import Button from 'antd/lib/button';
+
+# EditableTable
+
+A table displays rows of data.
+
+## Properties
+
+| Property | Description | Type | Default |
+| -------- | ----------- | ---- | ------- |
+| columns |array object of [columns properties](/editable-table#columns-properties) | boolean | - |
+| editable |whether table row is able to edit | boolean | `false` |
+| onFieldChange | hanlder of column element blur | function(form, name, record, index) | - |
+
+## columns Properties
+| Property | Description | Type | Default |
+| -------- | ----------- | ---- | ------- |
+| fields |array object of [DynamicElement Properties](/dynamic-element#fields-properties) | boolean | - |
+| column | table properties, [read details](https://ant.design/components/table/#API) | boolean | `false` |
+
+## Sample
+<Playground>
+    <EditableTable 
+        editable={true}
+        columns={
+            [
+            {
+                field: {
+                    formItem: { key: 'name' },
+                    decorator: {
+                        rules: [ { required: true, message: <></>  } ]
+                    },
+                    element: {
+                        placeholder: 'Name',
+                        readOnly: true,
+                        className: 'editable-table-element'
+                    },
+                    type: 'input',
+                    name: 'name',
+                    bindEventOnFieldChanged: false
+                },
+                column: {
+                    title: 'Name',
+                    dataIndex: 'name',
+                    width: '25%'
+                }
+            },
+            {
+                field: {
+                    formItem: { key: 'uom_id' },
+                    decorator: { rules: [ { required: true, message: <></> } ] },
+                    element: {
+                        placeholder: 'Unit of measure',
+                        showSearch: true,
+                        optionFilterProp: 'children',
+                        className: 'editable-table-element w-100-per'
+                    },
+                    type: 'select',
+                    name: 'uom_id',
+                    bindEventOnFieldChanged: true,
+                    data: [{ _id: 1, name: 'Can'}, { _id: 2, name: 'Unit' }],
+                    display_value: '_id',
+                    display_name: 'name'
+                },
+                column: {
+                    title: 'Unit of measure',
+                    dataIndex: 'uom_id',
+                    width: '20%'
+                }
+            },
+            {
+                field: {
+                    formItem: {
+                        key: 'quantity'
+                    },
+                    decorator: { rules: [ { required: true, message: <></>  } ], initialValue: 1 },
+                    element: {
+                        placeholder: 'Quantity',
+                        className: 'editable-table-element w-100-per'
+                    },
+                    type: 'number',
+                    name: 'quantity',
+                    bindEventOnFieldChanged: true
+                },
+                column: {
+                    title: 'Quantity',
+                    dataIndex: 'quantity',
+                    width: '15%'
+                }
+            },
+            {
+                field: {
+                    formItem: {
+                        key: 'price'
+                    },
+                    decorator: { rules: [ { required: true, message: <></>  } ] },
+                    element: {
+                        placeholder: 'Price',
+                        className: 'editable-table-element w-100-per'
+                    },
+                    type: 'number',
+                    name: 'price',
+                    bindEventOnFieldChanged: true
+                },
+                column: {
+                    title: 'Price',
+                    dataIndex: 'price'
+                }
+            },
+            {
+                field: {
+                    formItem: {
+                        key: 'amount'
+                    },
+                    decorator: { rules: [] },
+                    element: {
+                        placeholder: 'Amount',
+                        readOnly: true,
+                        className: 'editable-table-element w-100-per'
+                    },
+                    type: 'number',
+                    name: 'amount',
+                    bindEventOnFieldChanged: false
+                },
+                column: {
+                    title: 'Amount',
+                    dataIndex: 'amount'
+                }
+            },
+            {
+                field: {},
+                column: {},
+                isAction: true,
+                render: (text, record, index) => (
+                    <div className='editable-table-action'>
+                        <Button
+                            type='danger'
+                            ghost
+                            shape='circle'
+                            size='small'
+                            onClick={() => alert('You clicked remove')}
+                            icon='minus'
+                        />
+                    </div>
+                )
+            }
+        ]
+        }
+    />
+</Playground>

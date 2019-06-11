@@ -1,0 +1,25 @@
+---
+name: UserAvatar
+route: /useravatar
+---
+
+import { Playground } from 'docz'
+import UserAvatar from 'rk-admin-ui/es/user-avatar';
+
+# UserAvatar
+
+UserAvatar can be used to represent people or objects. It supports images or letters.
+## Properties
+
+| Property | Description | Type | Default |
+| -------- | ----------- | ---- | ------- |
+| isShowUsername | handle wheather show username or not | boolean | - |
+| photo | the url of the image for an UseAvatar | string | - |
+| shape | the shape of avatar | `circle` \| `square` | `circle` |
+| shortName | string of letters | string | - |
+| username | string of name | string | - |
+
+## Sample
+<Playground>
+    <UserAvatar isShowUsername={true} username='Ratana Keo' shortName='RK'/>
+</Playground>

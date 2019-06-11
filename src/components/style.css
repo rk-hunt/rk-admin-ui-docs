@@ -1,0 +1,38 @@
+:root {
+    --primary: #2064f5;
+    --white: #ffffff;
+    --success: #1ccf8f;
+    --danger: #f5222d;
+    --heading: #003366;
+    --text-color: #6e84a3;
+    --light-gray: #f8f9fb;
+    --light-gray-1: #edf0f5;
+    --light-gray-2: #f2f3f5;
+}
+
+.base-margin-right {
+    margin-right: 16px;
+}
+
+.basic-table .ant-table-thead > tr > th {
+    background-color: var(--light-gray) !important;
+}
+.basic-table .ant-checkbox .ant-checkbox-inner {
+    background-color: var(--light-gray-1);
+}
+.basic-table .ant-checkbox-checked .ant-checkbox-inner {
+    background-color: var(--primary) !important;
+}
+.basic-table .ant-table-tbody > tr.ant-table-row-selected td {
+    background-color: var(--light-gray) !important;
+}
+.basic-table .ant-table-tbody .ant-badge-status {
+    margin-left: 20px;
+}
+.basic-table .ant-table-pagination {
+    margin: 22px 0px 10px 0px !important;
+}
+
+.w-100-per {
+    width: 100% !important;
+}

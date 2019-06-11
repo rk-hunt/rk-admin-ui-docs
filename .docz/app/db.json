@@ -1,0 +1,389 @@
+{
+  "config": {
+    "title": "rk-admin-ui-docs",
+    "description": "My awesome app using docz",
+    "menu": [],
+    "version": "1.0.0",
+    "repository": null,
+    "native": false,
+    "codeSandbox": false,
+    "themeConfig": {},
+    "separator": "-",
+    "src": "./src/doc",
+    "plugins": [
+      {},
+      {}
+    ]
+  },
+  "entries": [
+    {
+      "key": "AppHeader.mdx",
+      "value": {
+        "name": "AppHeader",
+        "route": "/",
+        "id": "1f352c43f0fdcd6e7124a6ea3f82e5aa",
+        "filepath": "AppHeader.mdx",
+        "link": "",
+        "slug": "app-header",
+        "menu": "",
+        "headings": [
+          {
+            "slug": "appheader",
+            "depth": 1,
+            "value": "AppHeader"
+          },
+          {
+            "slug": "properties",
+            "depth": 2,
+            "value": "Properties"
+          },
+          {
+            "slug": "basic-usage",
+            "depth": 2,
+            "value": "Basic usage"
+          }
+        ]
+      }
+    },
+    {
+      "key": "ButtonTooltip.mdx",
+      "value": {
+        "name": "ButtonTooltip",
+        "route": "/button-tooltip",
+        "id": "43a4d02b53a8c842c6dd6b1051c98332",
+        "filepath": "ButtonTooltip.mdx",
+        "link": "",
+        "slug": "button-tooltip",
+        "menu": "",
+        "headings": [
+          {
+            "slug": "buttontooltip",
+            "depth": 1,
+            "value": "ButtonTooltip"
+          },
+          {
+            "slug": "properties",
+            "depth": 2,
+            "value": "Properties"
+          },
+          {
+            "slug": "sample",
+            "depth": 2,
+            "value": "Sample"
+          },
+          {
+            "slug": "more",
+            "depth": 2,
+            "value": "More"
+          }
+        ]
+      }
+    },
+    {
+      "key": "DynamicElement.mdx",
+      "value": {
+        "name": "DynamicElement",
+        "route": "/dynamic-element",
+        "id": "0a428316ecda5e95c34efcb58f8065d4",
+        "filepath": "DynamicElement.mdx",
+        "link": "",
+        "slug": "dynamic-element",
+        "menu": "",
+        "headings": [
+          {
+            "slug": "dynamicelement",
+            "depth": 1,
+            "value": "DynamicElement"
+          },
+          {
+            "slug": "properties",
+            "depth": 2,
+            "value": "Properties"
+          },
+          {
+            "slug": "fields-properties",
+            "depth": 2,
+            "value": "fields Properties"
+          },
+          {
+            "slug": "element-properties",
+            "depth": 2,
+            "value": "element Properties"
+          },
+          {
+            "slug": "sample",
+            "depth": 2,
+            "value": "Sample"
+          }
+        ]
+      }
+    },
+    {
+      "key": "EditableTable.mdx",
+      "value": {
+        "name": "EditableTable",
+        "route": "/editable-table",
+        "id": "bbbdae562dd156c7b6c5174748d18316",
+        "filepath": "EditableTable.mdx",
+        "link": "",
+        "slug": "editable-table",
+        "menu": "",
+        "headings": [
+          {
+            "slug": "editabletable",
+            "depth": 1,
+            "value": "EditableTable"
+          },
+          {
+            "slug": "properties",
+            "depth": 2,
+            "value": "Properties"
+          },
+          {
+            "slug": "columns-properties",
+            "depth": 2,
+            "value": "columns Properties"
+          },
+          {
+            "slug": "sample",
+            "depth": 2,
+            "value": "Sample"
+          }
+        ]
+      }
+    },
+    {
+      "key": "EmptyState.mdx",
+      "value": {
+        "name": "EmptyState",
+        "route": "/empty-state",
+        "id": "6b115e7154ee310a62d6c246c83c0db9",
+        "filepath": "EmptyState.mdx",
+        "link": "",
+        "slug": "empty-state",
+        "menu": "",
+        "headings": [
+          {
+            "slug": "emptystate",
+            "depth": 1,
+            "value": "EmptyState"
+          },
+          {
+            "slug": "properties",
+            "depth": 2,
+            "value": "Properties"
+          },
+          {
+            "slug": "sample",
+            "depth": 2,
+            "value": "Sample"
+          }
+        ]
+      }
+    },
+    {
+      "key": "Item.mdx",
+      "value": {
+        "name": "Item",
+        "route": "/item",
+        "id": "33499ff37a6161f74332a13ac7f6eac2",
+        "filepath": "Item.mdx",
+        "link": "",
+        "slug": "item",
+        "menu": "",
+        "headings": [
+          {
+            "slug": "item",
+            "depth": 1,
+            "value": "Item"
+          },
+          {
+            "slug": "properties",
+            "depth": 2,
+            "value": "Properties"
+          },
+          {
+            "slug": "sample",
+            "depth": 2,
+            "value": "Sample"
+          }
+        ]
+      }
+    },
+    {
+      "key": "ModalForm.mdx",
+      "value": {
+        "name": "Modal Form",
+        "route": "/modal-form",
+        "id": "c7d46a74366e0fb00ab96661aa20c3a4",
+        "filepath": "ModalForm.mdx",
+        "link": "",
+        "slug": "modal-form",
+        "menu": "",
+        "headings": [
+          {
+            "slug": "modalform",
+            "depth": 1,
+            "value": "ModalForm"
+          },
+          {
+            "slug": "properties",
+            "depth": 2,
+            "value": "Properties"
+          },
+          {
+            "slug": "sample",
+            "depth": 2,
+            "value": "Sample"
+          }
+        ]
+      }
+    },
+    {
+      "key": "NotificationIcon.mdx",
+      "value": {
+        "name": "NotificationIcon",
+        "route": "/notificationicon",
+        "id": "b57b0b4044a5bf5c848419a25dc40971",
+        "filepath": "NotificationIcon.mdx",
+        "link": "",
+        "slug": "notification-icon",
+        "menu": "",
+        "headings": [
+          {
+            "slug": "notificationicon",
+            "depth": 1,
+            "value": "NotificationIcon"
+          },
+          {
+            "slug": "properties",
+            "depth": 2,
+            "value": "Properties"
+          },
+          {
+            "slug": "sample",
+            "depth": 2,
+            "value": "Sample"
+          }
+        ]
+      }
+    },
+    {
+      "key": "PageHeader.mdx",
+      "value": {
+        "name": "PageHeader",
+        "route": "/page-header",
+        "id": "c35728e68ad0cac854de47fa520dbe44",
+        "filepath": "PageHeader.mdx",
+        "link": "",
+        "slug": "page-header",
+        "menu": "",
+        "headings": [
+          {
+            "slug": "pageheader",
+            "depth": 1,
+            "value": "PageHeader"
+          },
+          {
+            "slug": "properties",
+            "depth": 2,
+            "value": "Properties"
+          },
+          {
+            "slug": "sample",
+            "depth": 2,
+            "value": "Sample"
+          }
+        ]
+      }
+    },
+    {
+      "key": "PopoverDropdown.mdx",
+      "value": {
+        "name": "PopoverDropdown",
+        "route": "/popover-dropdown",
+        "id": "03762471f5c3779953875e44fc0f94c3",
+        "filepath": "PopoverDropdown.mdx",
+        "link": "",
+        "slug": "popover-dropdown",
+        "menu": "",
+        "headings": [
+          {
+            "slug": "popoverdropdown",
+            "depth": 1,
+            "value": "PopoverDropdown"
+          },
+          {
+            "slug": "properties",
+            "depth": 2,
+            "value": "Properties"
+          },
+          {
+            "slug": "basic-usage",
+            "depth": 2,
+            "value": "Basic usage"
+          }
+        ]
+      }
+    },
+    {
+      "key": "SkeletonTable.mdx",
+      "value": {
+        "name": "SkeletonTable",
+        "route": "/skeleton-table",
+        "id": "be578fc78c533c2b1ec9fe7950109bd0",
+        "filepath": "SkeletonTable.mdx",
+        "link": "",
+        "slug": "skeleton-table",
+        "menu": "",
+        "headings": [
+          {
+            "slug": "skeletontable",
+            "depth": 1,
+            "value": "SkeletonTable"
+          },
+          {
+            "slug": "properties",
+            "depth": 2,
+            "value": "Properties"
+          },
+          {
+            "slug": "sample",
+            "depth": 2,
+            "value": "Sample"
+          }
+        ]
+      }
+    },
+    {
+      "key": "UserAvatar.mdx",
+      "value": {
+        "name": "UserAvatar",
+        "route": "/useravatar",
+        "id": "4102edcecbafce21945ca2afefca15bc",
+        "filepath": "UserAvatar.mdx",
+        "link": "",
+        "slug": "user-avatar",
+        "menu": "",
+        "headings": [
+          {
+            "slug": "useravatar",
+            "depth": 1,
+            "value": "UserAvatar"
+          },
+          {
+            "slug": "properties",
+            "depth": 2,
+            "value": "Properties"
+          },
+          {
+            "slug": "sample",
+            "depth": 2,
+            "value": "Sample"
+          }
+        ]
+      }
+    }
+  ],
+  "props": []
+}

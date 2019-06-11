@@ -1,0 +1,34 @@
+---
+name: EmptyState
+route: /empty-state
+---
+
+import { Playground } from 'docz'
+import EmptyState from 'rk-admin-ui/es/empty-state';
+
+# EmptyState
+
+Empty state placeholder.
+## Properties
+
+| Property | Description | Type | Default |
+| -------- | ----------- | ---- | ------- |
+| description | Customize description | string | - |
+| image | Customize image. Will tread as image url when string provided | string \| ReactNode | - |
+| showButton | Whether show button action | boolean | `true` |
+| text | Text of the button | string | `Create New` |
+| title | Customize title | string | - |
+
+> Note: EmptyState accept all [Antd Design Button](https://ant.design/components/button/?locale=en-US#API) properties
+
+## Sample
+<Playground>
+    <EmptyState
+        title='Start Managing Your Product'
+        description='Create, customize Product'
+        command={() => {
+            console.log('Click From Empty State...');
+        }}
+        type='primary'
+    />
+</Playground>

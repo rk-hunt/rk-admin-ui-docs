@@ -1,0 +1,72 @@
+---
+name: AppHeader
+route: /
+---
+
+import { Playground } from 'docz'
+import Menu from 'antd/es/menu';
+import Icon from 'antd/es/icon';
+import AppHeader from 'rk-admin-ui/es/app-header';
+import NotificationIcon from 'rk-admin-ui/es/notification-icon';
+
+# AppHeader
+
+The global header of web app.
+
+## Properties
+
+| Property | Description | Type | Default |
+| -------- | ----------- | ---- | ------- |
+| collapsed | If `true`, side menu cannot be opened or closed | boolean | `false` |
+| menuFoldIcon | string of [icon](https://ant.design/components/icon/?locale=en-US#API) type | string | `menu-fold` |
+| menuUnfoldIcon | string of [icon](https://ant.design/components/icon/?locale=en-US#API) type | string | `menu-fold` |
+| notificationIcons | [NotificationIcon](/notification-icon) properties | ReactNode | - |
+| onSearch |handler of search box | func | - |
+| popoverDropdownContent | Content of the card | string\|ReactNode | - |
+| popoverDropdownTrigger | whether floating PopoverDropdown by `click` or `hover` | string | `click` |
+| searchPlaceholder |placeholder of search box | string | `Search` |
+| searchPopoverDropdownTrigger | whether floating PopoverDropdown by `click` or `hover` | string | `click` |
+| user | object of [UserAvartar](/user-avatar) properties | object | - |
+
+## Basic usage
+<Playground>
+    <AppHeader
+        collapsed={false}
+        isMobile={false}
+        notificationIcons={
+            <>
+                <div className='top-notification'>
+                    <NotificationIcon key='bell' icon='bell' count='5' iconTheme='filled' />
+                </div>
+                <div className='top-notification'>
+                    <NotificationIcon key='calendar' icon='calendar' count='12' iconTheme='filled' />
+                </div>
+                <div className='top-notification'>
+                    <NotificationIcon key='setting' icon='setting' count='0' iconTheme='filled' />
+                </div>
+            </>
+        }
+        onCollapse={() => console.log('click on collapse...')}
+        popoverDropdownContent={
+            <Menu className='popover-dropdown-item'>
+                <Menu.Item key='new_article'>
+                    <Icon type='plus' /> New Invoice
+                </Menu.Item>
+                <Menu.Item key='new_category'>
+                    <Icon type='plus' /> New Payment
+                </Menu.Item>
+                <Menu.Item key='new_tag'>
+                    <Icon type='plus' /> New Category
+                </Menu.Item>
+            </Menu>
+        }
+        searchAddon={
+            <Menu className='popover-dropdown-item' selectedKeys={['categories']} onClick={() => console.log('clicked search...')}>
+                <Menu.Item key='articles'>Article</Menu.Item>
+                <Menu.Item key='categories'>Category</Menu.Item>
+                <Menu.Item key='tags'>Tag</Menu.Item>
+            </Menu>
+        }
+        user={{ username: 'Ratana Keo', shortName: 'RK', isShowUsername: false }}
+    />
+</Playground>

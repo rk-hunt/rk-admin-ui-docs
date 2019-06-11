@@ -1,0 +1,41 @@
+---
+name: DynamicElement
+route: /dynamic-element
+---
+
+import { Playground } from 'docz'
+
+# DynamicElement
+
+Use to render various form items including checkbox, radio, input, select, and etc.
+
+## Properties
+
+| Property | Description | Type | Default |
+| -------- | ----------- | ---- | ------- |
+| columns | whether to render input elment with 2 columns or more| number | `1` |
+| fields |array object of [fields properties](/dynamic-element#fields-properties) | array object | - |
+| getFieldDecorator |Two-way binding for form, please read for details [here](https://ant.design/components/form/?locale=en-US#this.props.form.getFieldDecorator(id,-options)) | - | - |
+
+## fields Properties
+
+| Property | Description | Type | Default |
+| -------- | ----------- | ---- | ------- |
+| formItem Properties | Read details properties [here](https://ant.design/components/form/?locale=en-US#Form.Item)| - | - |
+| decorator Properties | Is getFieldDecorator options read details options [here](https://ant.design/components/form/?locale=en-US#getFieldDecorator(id,-options)-parameters)| - | - |
+| element Properties | Read details properties [here](https://ant.design/components/form/?locale=en-US#getFieldDecorator(id,-options)-parameters)| - | - |
+
+## element Properties
+
+| Property | Description | Type | Default |
+| -------- | ----------- | ---- | ------- |
+| checkbox, checkboxGroup |Properties of [checkbox](https://ant.design/components/checkbox/?locale=en-US#API) | - | - |
+| datepicker, rangePicker, monthPicker, weekPicker |Properties of [datepicker](https://ant.design/components/datepicker/?locale=en-US#API) | - | - |
+| radio, radioGroup |Properties of [radio](https://ant.design/components/radio/?locale=en-US#API) | - | - |
+| input, password, number, search, textarea |Properties of [input](https://ant.design/components/input/?locale=en-US#API) | - | - |
+| select |Properties of [select](https://ant.design/components/select/?locale=en-US#API) | - | - |
+
+
+## Sample
+
+User can found smaple here: [DrawerBasic](/drawer-basic) and [EditabelTable](/editable-table).

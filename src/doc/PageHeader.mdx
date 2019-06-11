@@ -1,0 +1,72 @@
+---
+name: PageHeader
+route: /page-header
+---
+
+import { Playground } from 'docz'
+import Button from 'antd/lib/button';
+import Divider from 'antd/lib/divider';
+import Icon from 'antd/lib/icon';
+import Menu from 'antd/lib/menu';
+import ButtonTooltip from 'rk-admin-ui/es/button-tooltip';
+import PageHeader from '../components/PageHeaderDemo';
+
+# PageHeader
+
+Panel slides from screen edge with form.
+
+## Properties
+
+| Property | Description | Type | Default |
+| -------- | ----------- | ---- | ------- |
+| isLoading |whether the skeleton is visible or not.| boolean | - |
+| leftActionControls\|rightActionControls | content of the left \| right controls|string\|ReactNode | - |
+| popoverDropdownItems | content of the card | string\|ReactNode | - |
+| popoverDropdownTrigger | whether floating PopoverDropdown by `click` or `hover` | string | `click` |
+| title | the title for PageHeader. | string | - |
+
+## Sample
+<Playground>
+    <PageHeader 
+        isLoading={true}
+        leftActionControls={
+            <>
+                <ButtonTooltip
+                    title='Edit'
+                    icon='edit'
+                    type='primary'
+                    shape='circle'
+                    className='base-margin-right'
+                />
+                <ButtonTooltip
+                    title='Active'
+                    icon='check'
+                    type='primary'
+                    shape='circle'
+                    className='base-margin-right'
+                />
+                <ButtonTooltip
+                    title='Inactive'
+                    icon='stop'
+                    type='primary'
+                    shape='circle'
+                />
+            </>
+        }
+        popoverDropdownItems={
+            <Menu className='popover-dropdown-item'>
+                <Menu.Item key='all'>All Categories</Menu.Item>
+                <Menu.Item key='active'>Active Categories</Menu.Item>
+                <Menu.Item key='inactive'>Inactive Categories</Menu.Item>
+                <Divider style={{ marginTop: 12, marginBottom: 5 }} />
+                <Menu.Item key='advanced_search'>
+                    <Icon type='search' /> Advanced Search
+                </Menu.Item>
+            </Menu>
+        }
+        rightActionControls={
+            <Button type='primary' icon='plus'>New Category</Button>
+            }
+        showAction={true}
+    />
+</Playground>

@@ -1,0 +1,36 @@
+{
+  "name": "rk-docs",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "antd": "3.19.2",
+    "less": "^3.9.0",
+    "less-loader": "^4.1.0",
+    "rk-admin-ui": "0.1.7-beta"
+  },
+  "scripts": {
+    "start": "docz dev",
+    "build": "docz build",
+    "docz:dev": "docz dev",
+    "docz:build": "docz build"
+  },
+  "resolutions": {
+    "react-hot-loader": "4.7.1"
+  },
+  "devDependencies": {
+    "@babel/plugin-syntax-dynamic-import": "7.2.0",
+    "@babel/preset-env": "^7.4.2",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.6",
+    "babel-plugin-import": "1.12.0",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "docz": "^1.2.0",
+    "docz-core": "^1.2.0",
+    "docz-plugin-css": "^0.11.0",
+    "docz-theme-default": "^1.2.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-hot-loader": "^4.11.0"
+  }
+}

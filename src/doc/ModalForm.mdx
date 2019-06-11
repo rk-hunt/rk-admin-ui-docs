@@ -1,0 +1,70 @@
+---
+name: Modal Form
+route: /modal-form
+---
+
+import { Playground } from 'docz'
+import ModalFormDemo from '../components/ModalFormDemo';
+
+# ModalForm
+
+When requiring users to interact with the application, but without jumping to a new page and interrupting the user's workflow, you can use Modal to create a new floating layer over the current page to get user feedback or display information.
+
+## Properties
+
+| Property | Description | Type | Default |
+| -------- | ----------- | ---- | ------- |
+| columns | whether to render input elment with 2 columns or more| number | `1` |
+| modalProps |accept all [Antd Design Modal](https://ant.design/components/modal/?locale=en-US#API) properties | object | - |
+| fields |array object of [fields properties](/dynamic-element#fields-properties) | array object | - |
+
+## Sample
+<Playground>
+   <ModalFormDemo 
+      cardFields={
+         [
+            {
+                  formItem: {
+                     label: 'name',
+                     key: 'name',
+                     colon: false
+                  },
+                  decorator: { rules: [ { required: true, message: 'Please enter name' } ] },
+                  element: {
+                     placeholder: 'name'
+                  },
+                  type: 'input',
+                  name: 'name'
+            },
+            {
+                  formItem: {
+                     label: 'name 2',
+                     key: 'name_2',
+                     colon: false
+                  },
+                  decorator: {},
+                  element: {
+                     placeholder: 'name 2'
+                  },
+                  type: 'input',
+                  name: 'name_2'
+            },
+            {
+                  formItem: {
+                     label: 'status',
+                     key: 'is_active',
+                     colon: false
+                  },
+                  decorator: { rules: [ { required: false } ], valuePropName: 'checked', initialValue: true },
+                  element: {},
+                  type: 'switch',
+                  name: 'is_active'
+            }
+         ]
+      }
+      modalProps = {{
+         okText: 'Save',
+         title: 'Modal Form'
+      }}
+   />
+</Playground>

@@ -1,0 +1,24 @@
+---
+name: SkeletonTable
+route: /skeleton-table
+---
+
+import { Playground } from 'docz'
+import SkeletonTable from 'rk-admin-ui/es/skeleton-table';
+
+# SkeletonTable
+
+Provide a placeholder at the place which need waiting for loading.
+
+## Properties
+
+| Property | Description | Type | Default |
+| -------- | ----------- | ---- | ------- |
+| columns | Set the column count of paragraph | number | `3` |
+| rows | Set the row count of paragraph | number | `2` |
+| width | Set the width of paragraph. When width is an Array, it can set the width of each row. Otherwise only set the last row width | number \| string \| Array<number \| string> | - |
+
+## Sample
+<Playground>
+    <SkeletonTable width='60%' />
+</Playground>

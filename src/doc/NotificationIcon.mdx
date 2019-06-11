@@ -1,0 +1,29 @@
+---
+name: NotificationIcon
+route: /notificationicon
+---
+
+import { Playground } from 'docz'
+import NotificationIcon from 'rk-admin-ui/es/notification-icon';
+
+# NotificationIcon
+
+Display a nuber of unread messages.
+
+## Properties
+
+| Property | Description | Type | Default |
+| -------- | ----------- | ---- | ------- |
+| count | number to show in badge | string | - |
+| icon | string name of the ant design icon | string | - |
+| iconTheme | theme of the ant design icon  | 'filled' \| 'outlined' \| 'twoTone' | 'outlined' |
+| twoToneColor | only support the two-tone icon. Specific the primary color.  | string (hex color) | - |
+
+> Note: NotificationIcon accept all [Antd Design Badge](https://ant.design/components/badge/?locale=en-US#API) properties
+
+## Sample
+<Playground>
+    <div className='top-notification'>
+        <NotificationIcon key='bell' icon='bell' count='9'/>
+    </div>
+</Playground>

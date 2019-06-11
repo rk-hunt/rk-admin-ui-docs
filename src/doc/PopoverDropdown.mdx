@@ -1,0 +1,44 @@
+---
+name: PopoverDropdown
+route: /popover-dropdown
+---
+
+import { Playground } from 'docz'
+import Menu from 'antd/lib/menu';
+import '../../node_modules/antd/lib/menu/style/index.css';
+import Icon from 'antd/lib/icon';
+import PopoverDropdown from 'rk-admin-ui/es/popover-dropdown';
+
+# PopoverDropdown
+
+The floating dow list popped by clicking or hovering.
+
+## Properties
+
+| Property | Description | Type | Default |
+| -------- | ----------- | ---- | ------- |
+| className |string of className | string | `no-arrow` |
+| content | content of the card | string\|ReactNode | - |
+| placement | The position of the PopoverDropdown relative to the target, which can be one of `top` `left` `right` `bottom` `topLeft` `topRight` `bottomLeft` `bottomRight` `leftTop` `leftBottom` `rightTop` `rightBottom` | string | `bottomLeft` |
+| trigger | whether floating PopoverDropdown by `click` or `hover` | string | `hover` |
+
+## Basic usage
+<Playground>
+    <PopoverDropdown content={
+        <Menu className='popover-dropdown-item'>
+            <Menu.Item key='new_article'>
+                <Icon type='plus' /> New Article
+            </Menu.Item>
+            <Menu.Item key='new_category'>
+                <Icon type='plus' /> New Category
+            </Menu.Item>
+            <Menu.Item key='new_tag'>
+                <Icon type='plus' /> New Tag
+            </Menu.Item>
+        </Menu>
+    }
+    >
+        Hover Me 
+        <Icon type='caret-down' theme='filled' className='page-header-icon-dropdown' />
+    </PopoverDropdown>
+</Playground>
