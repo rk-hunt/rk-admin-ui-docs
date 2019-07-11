@@ -8,6 +8,7 @@ import Button from 'antd/lib/button';
 import Divider from 'antd/lib/divider';
 import Icon from 'antd/lib/icon';
 import Menu from 'antd/lib/menu';
+import '../../node_modules/antd/lib/menu/style/index.css';
 import ButtonTooltip from 'rk-admin-ui/es/button-tooltip';
 import PageHeader from '../components/PageHeaderDemo';
 
@@ -28,45 +29,38 @@ Panel slides from screen edge with form.
 ## Sample
 <Playground>
     <PageHeader 
-        isLoading={true}
+        showAction={true}
         leftActionControls={
             <>
                 <ButtonTooltip
                     title='Edit'
                     icon='edit'
-                    type='primary'
                     shape='circle'
                     className='base-margin-right'
                 />
                 <ButtonTooltip
                     title='Active'
                     icon='check'
-                    type='primary'
                     shape='circle'
                     className='base-margin-right'
                 />
                 <ButtonTooltip
                     title='Inactive'
                     icon='stop'
-                    type='primary'
                     shape='circle'
                 />
             </>
         }
+        rightActionControls={
+            <Button type='primary' icon='plus'>New</Button>
+        }
         popoverDropdownItems={
-            <Menu className='popover-dropdown-item'>
+            <Menu className='popover-dropdown-item' defaultSelectedKeys={[ 'all' ]}>
                 <Menu.Item key='all'>All Categories</Menu.Item>
                 <Menu.Item key='active'>Active Categories</Menu.Item>
                 <Menu.Item key='inactive'>Inactive Categories</Menu.Item>
-                <Divider style={{ marginTop: 12, marginBottom: 5 }} />
-                <Menu.Item key='advanced_search'>
-                    <Icon type='search' /> Advanced Search
-                </Menu.Item>
             </Menu>
         }
-        rightActionControls={
-            <Button type='primary' icon='plus'>New Category</Button>
-            }
-        showAction={true}
+        isLoading={true}
     />
 </Playground>

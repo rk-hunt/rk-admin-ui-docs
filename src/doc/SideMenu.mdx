@@ -1,0 +1,34 @@
+---
+name: SideMenu
+route: /side-menu
+---
+
+import { Playground } from 'docz'
+import SideMenu from 'rk-admin-ui/es/side-menu';
+import menus from '../components/menu-data';
+import { BrowserRouter } from 'react-router-dom';
+
+# SideMenu
+Menu list of Navigation.
+
+## Properties
+
+| Property | Description | Type | Default |
+| -------- | ----------- | ---- | ------- |
+| collapsed |to set the current status | boolean | - |
+| defaultOpenKeys |array with the keys of default opened sub menus | (collapsed, type) => {} | - |
+| isMobile |to set current status of screen | boolean | `false` |
+| defaultSelectedKeys |array with the keys of default selected menu items | (collapsed, type) => {} | - |
+| onCollapse |the callback function, executed by clicking the trigger or activating the responsive layout | (collapsed, type) => {} | - |
+
+
+## Usage
+<Playground>
+    <BrowserRouter>
+        <SideMenu
+            logoType='text'
+            logo='SAAS CMS'
+            menus={menus}
+        />
+    </BrowserRouter>
+</Playground>

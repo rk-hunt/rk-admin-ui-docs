@@ -1,6 +1,6 @@
 ---
 name: UserAvatar
-route: /useravatar
+route: /user-avatar
 ---
 
 import { Playground } from 'docz'
@@ -13,13 +13,20 @@ UserAvatar can be used to represent people or objects. It supports images or let
 
 | Property | Description | Type | Default |
 | -------- | ----------- | ---- | ------- |
-| isShowUsername | handle wheather show username or not | boolean | - |
-| photo | the url of the image for an UseAvatar | string | - |
-| shape | the shape of avatar | `circle` \| `square` | `circle` |
+| isShowUsername | wheather show username | boolean | `false` |
 | shortName | string of letters | string | - |
 | username | string of name | string | - |
+| type | can be set to default, primary, success, warning, danger | string | `primary` |
 
-## Sample
+
+> Note: Accept all [Avatar Properties](https://ant.design/components/avatar/?locale=en-US#API)
+
+
+## Basic Usage
 <Playground>
-    <UserAvatar isShowUsername={true} username='Ratana Keo' shortName='RK'/>
+    <UserAvatar isShowUsername={false} username='Ratana Keo' shortName='RK' type='default' style={{ marginRight: 8}}/>
+    <UserAvatar isShowUsername={false} username='Ratana Keo' shortName='RK' style={{ marginRight: 8}}/>
+    <UserAvatar isShowUsername={false} username='Ratana Keo' shortName='RK' type='success' style={{ marginRight: 8}}/>
+    <UserAvatar isShowUsername={false} username='Ratana Keo' shortName='RK' type='warning' style={{ marginRight: 8}}/>
+    <UserAvatar isShowUsername={false} username='Ratana Keo' shortName='RK' type='danger' style={{ marginRight: 8}}/>
 </Playground>

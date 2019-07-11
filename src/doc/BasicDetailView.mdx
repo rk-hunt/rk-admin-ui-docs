@@ -1,0 +1,61 @@
+---
+name: BasicDetailsView
+route: /basic-details-view
+---
+
+import { Playground, Props } from 'docz'
+import Row from 'antd/es/row';
+import BasicDetailsView from 'rk-admin-ui/es/basic-details-view';
+import 'rk-admin-ui/es/style/utils.less';
+
+# BasicDetailsView
+
+Display multiple read-only fields in groups.
+
+## Properties
+
+| Property | Description | Type | Default |
+| -------- | ----------- | ---- | ------- |
+| columns |an object of { xs: 1-24, sm: 1-24, md: 1-24, lg: 1-24, xl: 1-24 } | object | - |
+| document |an object of data | object | - |
+| fields |array object of fields label and name, `[{ label: value, name: value}]` | array object | - |
+| onCancel | Specify a function that will be called when a user clicks close button on top right | function(e) | - |
+| descriptionField \| titleField| string name of object document property | string | - |
+
+
+## Basic usage
+<Playground>
+    <Row>
+        <BasicDetailsView
+            onClose={() => alert('Clicked onClose')}
+            columns={
+                { xs: 24, sm: 24, md: 24, lg: 24, xl: 24 }
+            }
+            descriptionField='name_2'
+            document={
+                {
+                    name: 'Tools & Home Improvement',
+                    name_2: 'Tools & Home Improvement',
+                    is_active: true
+                }
+            }
+            fields={
+                [
+                    {
+                        label: 'Name',
+                        name: 'name'
+                    },
+                    {
+                        label: 'Name 2',
+                        name: 'name_2'
+                    },
+                    {
+                        label: 'Status',
+                        name: 'is_active'
+                    }
+                ]
+            }
+            titleField='name'
+        />
+    </Row>
+</Playground>

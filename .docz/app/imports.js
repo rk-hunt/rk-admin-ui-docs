@@ -1,7 +1,19 @@
 export const imports = {
+  'AdvanceSearch.mdx': () =>
+    import(
+      /* webpackPrefetch: true, webpackChunkName: "advance-search" */ 'AdvanceSearch.mdx'
+    ),
   'AppHeader.mdx': () =>
     import(
       /* webpackPrefetch: true, webpackChunkName: "app-header" */ 'AppHeader.mdx'
+    ),
+  'BasicDetailView.mdx': () =>
+    import(
+      /* webpackPrefetch: true, webpackChunkName: "basic-detail-view" */ 'BasicDetailView.mdx'
+    ),
+  'BasicTable.mdx': () =>
+    import(
+      /* webpackPrefetch: true, webpackChunkName: "basic-table" */ 'BasicTable.mdx'
     ),
   'ButtonTooltip.mdx': () =>
     import(
@@ -36,6 +48,14 @@ export const imports = {
   'PopoverDropdown.mdx': () =>
     import(
       /* webpackPrefetch: true, webpackChunkName: "popover-dropdown" */ 'PopoverDropdown.mdx'
+    ),
+  'PresetTag.mdx': () =>
+    import(
+      /* webpackPrefetch: true, webpackChunkName: "preset-tag" */ 'PresetTag.mdx'
+    ),
+  'SideMenu.mdx': () =>
+    import(
+      /* webpackPrefetch: true, webpackChunkName: "side-menu" */ 'SideMenu.mdx'
     ),
   'SkeletonTable.mdx': () =>
     import(

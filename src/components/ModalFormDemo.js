@@ -1,9 +1,10 @@
 import React, { Fragment, useState, memo } from 'react';
 import Button from 'antd/lib/button';
 import ModalForm from 'rk-admin-ui/es/modal-form';
+import 'rk-admin-ui/es/style/utils.less';
 
 const ModalFormDemo = (props) => {
-    const { cardFields, ...modalProps } = props;
+    const { fields } = props;
 
     const [ visible, setVisible ] = useState(false);
 
@@ -14,11 +15,13 @@ const ModalFormDemo = (props) => {
             </Button>
             <ModalForm
                 modalProps={{
-                    ...modalProps,
                     visible: visible,
-                    onCancel: () => setVisible(!visible)
+                    onCancel: () => setVisible(!visible),
+                    cancelText: 'Cancel',
+                    okText: 'Save',
+                    title: 'New Category'
                 }}
-                fields={cardFields}
+                fields={props.fields}
             />
         </Fragment>
     );

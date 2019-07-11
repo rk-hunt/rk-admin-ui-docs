@@ -17,10 +17,39 @@
   },
   "entries": [
     {
+      "key": "AdvanceSearch.mdx",
+      "value": {
+        "name": "AdvanceSearch",
+        "route": "/",
+        "id": "15b6011192bf28863e520e1f6df70d77",
+        "filepath": "AdvanceSearch.mdx",
+        "link": "",
+        "slug": "advance-search",
+        "menu": "",
+        "headings": [
+          {
+            "slug": "advancesearch",
+            "depth": 1,
+            "value": "AdvanceSearch"
+          },
+          {
+            "slug": "properties",
+            "depth": 2,
+            "value": "Properties"
+          },
+          {
+            "slug": "basic-usage",
+            "depth": 2,
+            "value": "Basic usage"
+          }
+        ]
+      }
+    },
+    {
       "key": "AppHeader.mdx",
       "value": {
         "name": "AppHeader",
-        "route": "/",
+        "route": "/app-header",
         "id": "1f352c43f0fdcd6e7124a6ea3f82e5aa",
         "filepath": "AppHeader.mdx",
         "link": "",
@@ -41,6 +70,64 @@
             "slug": "basic-usage",
             "depth": 2,
             "value": "Basic usage"
+          }
+        ]
+      }
+    },
+    {
+      "key": "BasicDetailView.mdx",
+      "value": {
+        "name": "BasicDetailsView",
+        "route": "/basic-details-view",
+        "id": "c7b29871f92dcb75e813f890e558c6de",
+        "filepath": "BasicDetailView.mdx",
+        "link": "",
+        "slug": "basic-detail-view",
+        "menu": "",
+        "headings": [
+          {
+            "slug": "basicdetailsview",
+            "depth": 1,
+            "value": "BasicDetailsView"
+          },
+          {
+            "slug": "properties",
+            "depth": 2,
+            "value": "Properties"
+          },
+          {
+            "slug": "basic-usage",
+            "depth": 2,
+            "value": "Basic usage"
+          }
+        ]
+      }
+    },
+    {
+      "key": "BasicTable.mdx",
+      "value": {
+        "name": "BasicTable",
+        "route": "/basic-table",
+        "id": "1a9241295a2e3b76dd62c20428ea5baf",
+        "filepath": "BasicTable.mdx",
+        "link": "",
+        "slug": "basic-table",
+        "menu": "",
+        "headings": [
+          {
+            "slug": "basictable",
+            "depth": 1,
+            "value": "BasicTable"
+          },
+          {
+            "slug": "properties",
+            "depth": 2,
+            "value": "Properties"
+          },
+          {
+            "slug": "usage",
+            "depth": 2,
+            "value": "Usage"
           }
         ]
       }
@@ -203,9 +290,14 @@
             "value": "Properties"
           },
           {
-            "slug": "sample",
+            "slug": "between-sample",
             "depth": 2,
-            "value": "Sample"
+            "value": "Between Sample"
+          },
+          {
+            "slug": "right-sample",
+            "depth": 2,
+            "value": "Right Sample"
           }
         ]
       }
@@ -327,6 +419,64 @@
       }
     },
     {
+      "key": "PresetTag.mdx",
+      "value": {
+        "name": "PresetTag",
+        "route": "/preset-tag",
+        "id": "9f27d349c2c32d0e6f3f79f0186f1787",
+        "filepath": "PresetTag.mdx",
+        "link": "",
+        "slug": "preset-tag",
+        "menu": "",
+        "headings": [
+          {
+            "slug": "presettag",
+            "depth": 1,
+            "value": "PresetTag"
+          },
+          {
+            "slug": "properties",
+            "depth": 2,
+            "value": "Properties"
+          },
+          {
+            "slug": "usage",
+            "depth": 2,
+            "value": "Usage"
+          }
+        ]
+      }
+    },
+    {
+      "key": "SideMenu.mdx",
+      "value": {
+        "name": "SideMenu",
+        "route": "/side-menu",
+        "id": "6db13425108d00b68217badb39ab43f5",
+        "filepath": "SideMenu.mdx",
+        "link": "",
+        "slug": "side-menu",
+        "menu": "",
+        "headings": [
+          {
+            "slug": "sidemenu",
+            "depth": 1,
+            "value": "SideMenu"
+          },
+          {
+            "slug": "properties",
+            "depth": 2,
+            "value": "Properties"
+          },
+          {
+            "slug": "usage",
+            "depth": 2,
+            "value": "Usage"
+          }
+        ]
+      }
+    },
+    {
       "key": "SkeletonTable.mdx",
       "value": {
         "name": "SkeletonTable",
@@ -359,7 +509,7 @@
       "key": "UserAvatar.mdx",
       "value": {
         "name": "UserAvatar",
-        "route": "/useravatar",
+        "route": "/user-avatar",
         "id": "4102edcecbafce21945ca2afefca15bc",
         "filepath": "UserAvatar.mdx",
         "link": "",
@@ -377,9 +527,9 @@
             "value": "Properties"
           },
           {
-            "slug": "sample",
+            "slug": "basic-usage",
             "depth": 2,
-            "value": "Sample"
+            "value": "Basic Usage"
           }
         ]
       }

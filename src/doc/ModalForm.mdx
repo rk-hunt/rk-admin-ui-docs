@@ -4,7 +4,7 @@ route: /modal-form
 ---
 
 import { Playground } from 'docz'
-import ModalFormDemo from '../components/ModalFormDemo';
+import ModalForm from '../components/ModalFormDemo';
 
 # ModalForm
 
@@ -20,51 +20,79 @@ When requiring users to interact with the application, but without jumping to a 
 
 ## Sample
 <Playground>
-   <ModalFormDemo 
-      cardFields={
+   <ModalForm 
+      fields={
          [
             {
-                  formItem: {
-                     label: 'name',
-                     key: 'name',
-                     colon: false
-                  },
-                  decorator: { rules: [ { required: true, message: 'Please enter name' } ] },
-                  element: {
-                     placeholder: 'name'
-                  },
-                  type: 'input',
-                  name: 'name'
-            },
-            {
-                  formItem: {
-                     label: 'name 2',
-                     key: 'name_2',
-                     colon: false
-                  },
-                  decorator: {},
-                  element: {
-                     placeholder: 'name 2'
-                  },
-                  type: 'input',
-                  name: 'name_2'
-            },
-            {
-                  formItem: {
-                     label: 'status',
-                     key: 'is_active',
-                     colon: false
-                  },
-                  decorator: { rules: [ { required: false } ], valuePropName: 'checked', initialValue: true },
-                  element: {},
-                  type: 'switch',
-                  name: 'is_active'
+            isMultiFields: true,
+            fields: [
+                {
+                    formItem: {
+                        label: 'Name',
+                        key: 'name',
+                        colon: false,
+                        style: {
+                            display: 'inline-block',
+                            width: 'calc(50% - 12px)',
+                            marginTop: 8
+                        }
+                    },
+                    decorator: { rules: [{required: true, message: 'Please enter name'}]},
+                    element: {
+                        placeholder: 'Name'
+                    },
+                    type: 'input',
+                    name: 'name'
+                },
+                {
+                    formItem: {
+                        label: 'Name 1',
+                        key: 'name_1',
+                        colon: false,
+                        style: {
+                            display: 'inline-block',
+                            width: 'calc(50% - 12px)',
+                            marginTop: 8,
+                            marginLeft: 24
+                        }
+                    },
+                    decorator: {},
+                    element: {
+                        placeholder: 'Name 1'
+                    },
+                    type: 'input',
+                    name: 'name_1'
+                }
+            ],
+            formItem: {
+                className: 'mb-0 p-0'
             }
+        },
+        {
+            formItem: {
+                label: 'Name 2',
+                key: 'name_2',
+                colon: false
+            },
+            decorator: {},
+            element: {
+                placeholder: 'Name 2'
+            },
+            type: 'input',
+            name: 'name_2'
+        },
+        {
+            formItem: {
+                label: 'Status',
+                key: 'is_active',
+                colon: false
+            },
+            decorator: { rules: [ { required: false } ], valuePropName: 'checked', initialValue: true },
+            element: {},
+            type: 'switch',
+            name: 'is_active'
+        }
          ]
       }
-      modalProps = {{
-         okText: 'Save',
-         title: 'Modal Form'
-      }}
    />
 </Playground>

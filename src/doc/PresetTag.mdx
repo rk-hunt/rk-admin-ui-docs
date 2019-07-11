@@ -1,0 +1,30 @@
+---
+name: PresetTag
+route: /preset-tag
+---
+
+import { Playground } from 'docz'
+import PresetTag from 'rk-admin-ui/es/preset-tag';
+
+# PresetTag
+
+PresetTag for categorizing or markup.
+
+## Properties
+
+| Property | Description | Type | Default |
+| -------- | ----------- | ---- | ------- |
+| type | can be set to default, primary, success, warning, danger | string | `primary` |
+
+> Note: Accept all [Tag Properties](https://ant.design/components/tag/?locale=en-US#API)
+
+## Usage
+<Playground>
+    <div>
+        <PresetTag>Default</PresetTag>
+        <PresetTag type='primary'>Primary</PresetTag>
+        <PresetTag type='success'>Success</PresetTag>
+        <PresetTag type='warning'>Warning</PresetTag>
+        <PresetTag type='danger'>Danger</PresetTag>
+    </div>
+</Playground>

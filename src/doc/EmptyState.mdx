@@ -4,7 +4,7 @@ route: /empty-state
 ---
 
 import { Playground } from 'docz'
-import EmptyState from 'rk-admin-ui/es/empty-state';
+import EmptyState from '../components/EmptyStateDemo';
 
 # EmptyState
 
@@ -24,11 +24,10 @@ Empty state placeholder.
 ## Sample
 <Playground>
     <EmptyState
-        title='Start Managing Your Product'
-        description='Create, customize Product'
-        command={() => {
-            console.log('Click From Empty State...');
-        }}
+        title='Start managing your category'
+        description='create customize category'
+        onClick={() => console.log('Clicked New')}
         type='primary'
+        text='Create New'
     />
 </Playground>

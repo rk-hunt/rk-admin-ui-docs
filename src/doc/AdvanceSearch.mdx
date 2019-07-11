@@ -1,0 +1,72 @@
+---
+name: AdvanceSearch
+route: /
+---
+
+import { Playground, Props } from 'docz'
+import AdvanceSearch from '../components/AdvanceSearchDemo';
+
+# AdvanceSearch
+
+is a component which allows a user to specify additional requirements for a search.
+
+## Properties
+
+| Property | Description | Type | Default |
+| -------- | ----------- | ---- | ------- |
+| columns |array object of [columns properties](/editable-table#columns-properties) | number | `4` |
+| fields |array object of [DynamicElement Properties](/dynamic-element#fields-properties) | boolean | - |
+| firstTabName | Show text in TabPane's head | string | `General` |
+| activeKey | Key of the active panel | string[]\|string | - |
+| cancelButtonText | Text of the CANCEL button | string\|ReactNode | `Cancel` |
+| searchButtonText | Text of the SEARCH button | string\|ReactNode | `Search` |
+| onCancel | Specify a function that will be called when a user clicks cancel, close button on top right or CANCEL button | function(e) | - |
+| onSearch | Specify a function that will be called when a user clicks button SEARCH | function(e) | - |
+
+## Basic usage
+<Playground>
+    <AdvanceSearch 
+        activeKey='1'
+                fields={[
+                    {
+                        formItem: {
+                            label: 'Name',
+                            key: 'name',
+                            colon: false
+                        },
+                        decorator: {},
+                        element: {
+                            placeholder: 'Name'
+                        },
+                        type: 'input',
+                        name: 'name'
+                    },
+                    {
+                        formItem: {
+                            label: 'Name 2',
+                            key: 'name_2',
+                            colon: false
+                        },
+                        decorator: {},
+                        element: {
+                            placeholder: 'Name 2'
+                        },
+                        type: 'input',
+                        name: 'name_2'
+                    },
+                    {
+                        formItem: {
+                            label: 'Status',
+                            key: 'is_active',
+                            colon: false
+                        },
+                        decorator: { rules: [ { required: false } ], valuePropName: 'checked', initialValue: true },
+                        element: {},
+                        type: 'switch',
+                        name: 'is_active'
+                    }
+                ]}
+                onSearch={() => console.log('OnSearch Clicked')}
+                onCancel={() => console.log('OnCancel Clicked')}
+    />
+</Playground>

@@ -1,0 +1,116 @@
+---
+name: BasicTable
+route: /basic-table
+---
+
+import { Playground} from 'docz'
+import Row from 'antd/es/row';
+import BasicTable from 'rk-admin-ui/es/basic-table';
+import Tag from 'rk-admin-ui/es/preset-tag';
+
+# BasicTable
+
+A table displays rows of data.
+
+## Properties
+> Note: Accept all [Table Properties](https://ant.design/components/table/?locale=en-US#API)
+
+## Usage
+<Playground>
+    <BasicTable
+        columns={
+            [
+                {
+                    title: 'Name',
+                    dataIndex: 'name',
+                    key: 'name'
+                },
+                {
+                    title: 'Name 2',
+                    dataIndex: 'name_2',
+                    key: 'name_2'
+                },
+                {
+                    title: 'Status',
+                    key: 'status',
+                    dataIndex: 'is_active',
+                    render: (text, record) => (
+                        <Tag type={record.is_active === true ? 'success' : 'danger'}>
+                            {record.is_active === true ? 'Active' : 'Inactive'}
+                        </Tag>
+                    )
+                }
+            ]
+        }
+        dataSource={
+            [
+                {
+                    _id: Math.floor(Math.random() * 1000000000),
+                    name: 'Electronics',
+                    name_2: 'Electronics',
+                    is_active: true
+                },
+                {
+                    _id: Math.floor(Math.random() * 1000000000),
+                    name: 'Music',
+                    name_2: 'Music',
+                    is_active: true
+                },
+                {
+                    _id: Math.floor(Math.random() * 1000000000),
+                    name: 'Women Fashion',
+                    name_2: 'Women Fashion',
+                    is_active: true
+                },
+                {
+                    _id: Math.floor(Math.random() * 1000000000),
+                    name: 'Men Fashion',
+                    name_2: 'Men Fashion',
+                    is_active: true
+                },
+                {
+                    _id: Math.floor(Math.random() * 1000000000),
+                    name: 'Movies & Television',
+                    name_2: 'Movies & Television',
+                    is_active: false
+                },
+                {
+                    _id: Math.floor(Math.random() * 1000000000),
+                    name: 'Software',
+                    name_2: 'Software',
+                    is_active: true
+                },
+                {
+                    _id: Math.floor(Math.random() * 1000000000),
+                    name: 'Sports and Outdoors',
+                    name_2: 'Sports and Outdoors',
+                    is_active: true
+                },
+                {
+                    _id: Math.floor(Math.random() * 1000000000),
+                    name: 'Tools & Home Improvement',
+                    name_2: 'Tools & Home Improvement',
+                    is_active: true
+                },
+                {
+                    _id: Math.floor(Math.random() * 1000000000),
+                    name: 'Baby',
+                    name_2: 'Baby',
+                    is_active: true
+                }
+            ]
+        }
+        pagination={{
+            hideOnSinglePage: true,
+            pageSize: 5,
+            total: 9,
+            showTotal: (total, range) => `${range[0]}-${range[1]} of ${total}`
+        }}
+        rowKey='_id'
+        rowSelection={
+            {
+                onChange: (selectedRowKeys, selectedRows) => {}
+            }
+        }
+    />
+</Playground>
